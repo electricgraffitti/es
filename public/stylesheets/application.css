@@ -164,7 +164,8 @@ label.error{background:#efefef none repeat scroll 0 0;color:#DB0404;font-size:85
 #error_500_page{position:relative;margin:20px auto;width:800px;height:500px;background:url(../images/500.png) 0px 0px no-repeat;}
 /*************************************************************************************************************************************/
 /*************************************************************************************************** TYPOGRAPHY **********************/
-h1,h2,h3,h4,h5{color:#333;margin-top:0px;text-shadow:0px 1px 0px #fff;}
+html,body{font-family:"proxima-nova-1","proxima-nova-2",Helvetica,Arial,sans-serif;}
+h1,h2,h3,h4,h5{color:#efefef;margin-top:0px;text-shadow:0px 1px 0px #000;}
 h1{font-size:235%;}
 h2{font-size:215%;}
 h3{font-size:145.5%;}
@@ -182,7 +183,7 @@ h2 a.small_text{font-size:55%;}
 */
 /*************************************************************************************************************************************/
 /**************************************************************************************************** GENERAL LAYOUT *****************/
-body{position:relative;text-align:center;width:100%;}
+body{position:relative;text-align:center;width:100%;background:#111 url(../images/general/bg.png) 0px 0px repeat;}
 #wrapper{position:relative;margin:0px auto;width:960px;}
 header,#hd,#bd,footer,#ft{position:relative;float:left;width:100%;}
 .round{-webkit-border-radius:3px;-moz-border-radius:3px;-opera-border-radius:3px;border-radius:3px;}
@@ -208,18 +209,18 @@ header,#hd,#bd,footer,#ft{position:relative;float:left;width:100%;}
 .block_list li{padding-left:10px;padding-bottom:20px;list-style:disc inside;}
 /*************************************************************************************************************************************/
 /***************************************************************************************************** COLORS ************************/
-html,body{color:#444;background:url('../images/gray_bg_pattern.png') 0px 0px repeat;font-family:"museo-sans-1","museo-sans-2",Helvetica,Arial,sans-serif;}
+html,body{color:#efefef;}
 .title{color:#cc0000;}
-.blue{color:#3058bf;}
+.blue{color:#1149e7;}
 .dark_blue{color:#07246a;}
-.blue_text{color:#3058bf;}
-.blue_bg{background:#3058bf;}
-.red{color:#b11919;}
+.blue_bg{background:#0a2c8a;}
+.green{color:#4ee711;}
 .gray{color:#444;}
+.yellow{color:#f8f515;}
 /*************************************************************************************************************************************/
 /****************************************************************************************************** HEADER ***********************/
-#mast_header{position:absolute;top:0px;left:0px;background:url('../images/mast_header_bg.png') #fff repeat-x;height:130px;width:100%;border-bottom:4px solid #3058bf;}
-header{position:relative;float:left;height:134px;}
+#mast_header{position:absolute;top:0px;left:0px;height:135px;width:100%;border-bottom:1px solid #0a2c8a;}
+header{position:relative;float:left;height:135px;}
 #logo{background:url("../images/logo.png") no-repeat scroll 0 0 transparent;height:200px;left:-80px;position:absolute;text-indent:-9999em;top:-3px;width:530px;z-index:1;margin:0px;}
 #logo a{display:block;height:130px;position:absolute;right:0;top:0;width:400px;}
 /*************************************************************************************************************************************/
@@ -232,7 +233,7 @@ header{position:relative;float:left;height:134px;}
 #main_nav ul li a:hover{color:#fff;text-decoration:underline;}
 /*************************************************************************************************************************************/
 /****************************************************************************************************** MAIN CONTENT *****************/
-#bd{background:url(../images/highlight.png) 35px -4px no-repeat;text-align:left;}
+#bd{text-align:left;}
 #content{position:relative;width:100%;float:left;padding-bottom:20px;}
 #content_star{position:absolute;bottom:0px;right:0px;width:100%;height:300px;background:url(../images/content_bg.png) -20px bottom no-repeat;}
 #content img.wrapped_image{padding:5px;border:1px solid #aaa;background:#efefef;margin-bottom:10px;}
