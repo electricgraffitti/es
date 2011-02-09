@@ -18,4 +18,8 @@ class PagesController < ApplicationController
   def terms
   end
   
+  def password_reset
+    
+  end
+  
 end

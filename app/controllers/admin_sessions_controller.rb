@@ -22,9 +22,9 @@ class AdminSessionsController < ApplicationController
   
   def check_session
     if current_admin
-      redirect_to dashboard_path
+      redirect_to admin_dashboard_path
     else
-      redirect_to new_user_session_path
+      redirect_to new_admin_session_path
     end
   end
 

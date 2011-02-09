@@ -8,6 +8,9 @@ Es::Application.routes.draw do
   match "admin-logout" => "admin_sessions#destroy", :as => :account_logout
   match "admin-dashboard" => "admins#admin_dashboard", :as => :admin_dashboard
   
+  # Password Reset Path
+  match "password-reset-submit" => "password_reset#create", :as => :password_submit_reset
+  
   # Custom Routes
   match "contact-#{APP[:application_name]}" => "pages#contact", :as => :contact
   match "about-#{APP[:application_name]}" => "pages#about", :as => :about

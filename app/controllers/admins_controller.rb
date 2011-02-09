@@ -1,7 +1,7 @@
 class AdminsController < ApplicationController
   
-  before_filter :super_admin, :only => [:new, :create]
-  before_filter :require_user, :except => [:new, :create]
+  before_filter :super_admin, :only => [:new, :create, :index]
+  before_filter :require_admin, :except => [:new, :create]
   
   def index
     @admins = Admin.all
@@ -39,11 +39,9 @@ class AdminsController < ApplicationController
 
     respond_to do |format|
       if @admin.save
-        format.html { redirect_to(@admin, :notice => 'Admin was successfully created.') }
-        format.xml  { render :xml => @admin, :status => :created, :location => @admin }
+        format.html { redirect_to(admins_path, :notice => 'Admin was successfully created.') }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @admin.errors, :status => :unprocessable_entity }
       end
     end
   end
