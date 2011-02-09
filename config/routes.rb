@@ -11,7 +11,9 @@ Es::Application.routes.draw do
   # Custom Routes
   match "contact-#{APP[:application_name]}" => "pages#contact", :as => :contact
   match "about-#{APP[:application_name]}" => "pages#about", :as => :about
-  
+  match "#{APP[:application_name]}-privacy-policy" => "pages#privacy", :as => :privacy
+  match "#{APP[:application_name]}-privacy-policy" => "pages#privacy", :as => :privacy
+  match "#{APP[:application_name]}-faqs" => "pages#faq", :as => :faq
   
   root :to => "pages#index"
 
