@@ -799,6 +799,7 @@ font-weight: 100;
 	width: 33px;
 	height: 55px;
 	top: 142px;
+	cursor: pointer;
 }
 .banner_button span {
 	position: absolute;
