@@ -45,8 +45,8 @@ var base = {
      		$container = jQuery('#slider .scrollContainer'),
      		$scroll = jQuery('#slider .scroll').css('overflow', 'hidden'),
 				$nav = jQuery('#banner_nav .navigation a'),
-		 		$prevNav = jQuery("div.banner_arrows.left_arrow"),
-				$nextNav = jQuery("div.banner_arrows.right_arrow");
+		 		$prevNav = jQuery("div.banner_button.l"),
+				$nextNav = jQuery("div.banner_button.r");
     
     var scrollOptions = {
       target: $scroll,

@@ -1,6 +1,40 @@
 <% content_for :title do %>
   <%= APP[:application_name] %> Home Page
 <% end %>
+
+<% content_for :banner do %>
+  <div id="banner" class="full_row no_top">
+    <%= render :partial => 'banner_edges' %>
+  	<div id="slider" class="index_banner">
+      <div class="scroll">
+        <div class="scrollContainer">
+          <%= render :partial => 'pages/index_banner', :locals => {:banner_id => "1"} %>
+          <%= render :partial => 'pages/index_banner', :locals => {:banner_id => "2"} %>
+          <%= render :partial => 'pages/index_banner', :locals => {:banner_id => "3"} %>
+          <%= render :partial => 'pages/index_banner', :locals => {:banner_id => "4"} %>
+        </div>
+      </div>
+    </div>
+    <!-- Banner Nav -->
+    <div id="banner_nav" class="content_bottom">
+      <ul>
+        <li><%= link_to "banner1", "#banner_1" %></li>
+        <li><%= link_to "banner2", "#banner_2" %></li>
+        <li><%= link_to "banner3", "#banner_3" %></li>
+        <li><%= link_to "banner4", "#banner_4" %></li>
+      </ul>
+    </div>
+  </div>
+<% end %>
+
 <div class="full_row">
-  <h2>Energy Solutions</h2>
+
 </div>
+
+<% content_for :javascripts do %>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      base.indexBanners();
+    });
+  </script>
+<% end %>
