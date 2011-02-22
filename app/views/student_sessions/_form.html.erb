@@ -1,10 +1,10 @@
 <div class="full_row">
-  <h2 class="page_header">Admin Login</h2>
+  <h2 class="page_header">Student Login</h2>
 </div>
 <div class="full_row">
   <div class="column_2">
-    <%= form_for(@admin_session) do |f| %>
-    	<%= render :partial => "layouts/error_block", :locals => {:object => @admin_session} %>
+    <%= form_for(student_session) do |f| %>
+    	<%= render :partial => "layouts/error_block", :locals => {:object => student_session} %>
       <p>
         <%= f.label :username %><br />
         <%= f.text_field :username %>

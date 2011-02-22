@@ -1,5 +1,9 @@
 Es::Application.routes.draw do
   
+  resources :students
+  resources :student_sessions
+  resources :teachers
+  resources :teacher_sessions
   resources :admins
   resources :admin_sessions
   
@@ -7,6 +11,15 @@ Es::Application.routes.draw do
   match "admin-login" => "admin_sessions#check_session", :as => :account_login
   match "admin-logout" => "admin_sessions#destroy", :as => :account_logout
   match "admin-dashboard" => "admins#admin_dashboard", :as => :admin_dashboard
+  
+  match "login" => "pages#login", :as => :login
+  match "logout" => "pagens#logout", :as => :logout
+  
+  match "student-login" => "students#new", :as => :student_login
+  match "student-logout" => "students#destroy", :as => :student_logout
+  
+  match "teacher-login" => "teachers#new", :as => :teacher_login
+  match "teacher-logout" => "teachers#destroy", :as => :teacher_logout
   
   # Password Reset Path
   match "password-reset-submit" => "password_reset#create", :as => :password_submit_reset

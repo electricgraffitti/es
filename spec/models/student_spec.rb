@@ -1,12 +1,6 @@
-require 'spec_helper'
-
-describe Admin do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
-
 # == Schema Information
 #
-# Table name: admins
+# Table name: students
 #
 #  id                  :integer(4)      not null, primary key
 #  first_name          :string(255)
@@ -25,8 +19,12 @@ end
 #  last_login_at       :datetime
 #  current_login_ip    :string(255)
 #  last_login_ip       :string(255)
-#  admin_user          :boolean(1)
 #  created_at          :datetime
 #  updated_at          :datetime
 #
 
+require 'spec_helper'
+
+describe Student do
+  pending "add some examples to (or delete) #{__FILE__}"
+end

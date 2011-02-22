@@ -1,0 +1,6 @@
+<div class="teacher_form">
+  <%= render :partial => "teacher_sessions/form", :locals => {:teacher_session => @teacher_session} %>
+</div>
+<div class="student_form hidden">
+  <%= render :partial => "student_sessions/form", :locals => {:student_session => @student_session} %>
+</div>

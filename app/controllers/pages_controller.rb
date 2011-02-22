@@ -3,6 +3,11 @@ class PagesController < ApplicationController
   def index
   end
   
+  def login
+    @student_session = StudentSession.new
+    @teacher_session = TeacherSession.new
+  end
+  
   def about
   end
   
