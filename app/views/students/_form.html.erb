@@ -1,15 +1,5 @@
-<%= form_for(@student) do |f| %>
-  <% if @student.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
-
-      <ul>
-      <% @student.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_for @student, :html => {:multipart => true} do |f| %>
+<%= render :partial => 'layouts/error_block', :locals => {:object => @student} %>
 
   <div class="field">
     <%= f.label :first_name %><br />
@@ -27,6 +17,11 @@
     <%= f.label :username %><br />
     <%= f.text_field :username %>
   </div>
+	<%= f.fields_for :assets do |asset_form| %>
+		<div class="field">
+			<%= asset_form.label :assets, "Upload and Avatar" %><br />
+			<%= asset_form.file_field :attachment, :size => 16 %>
+		</div>
   <div class="actions">
     <%= f.submit %>
   </div>

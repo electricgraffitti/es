@@ -25,6 +25,7 @@ class TeachersController < ApplicationController
   # GET /teachers/new.xml
   def new
     @teacher = Teacher.new
+    @teacher.assets.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,12 @@ class TeachersController < ApplicationController
   # GET /teachers/1/edit
   def edit
     @teacher = Teacher.find(params[:id])
+    
+    if @teacher.assets.blank?
+       @teacher.assets.build      
+    end
+      
+    end
   end
 
   # POST /teachers

@@ -25,6 +25,14 @@
 
 class Teacher < ActiveRecord::Base
   
+  #Associations
+  belongs_to :classroom
+  has_many :students, :through => :classrooms
+  has_many :assets, :dependent => :destroy
+  
+  #Assets
+  accepts_nested_attributes_for :assets, :allow_destroy => true, :reject_if => lambda { |a| a[:attachment].blank? }
+  
   # Validations
   validates :first_name, :presence => true, :length => { :minimum => 2 }
   validates :last_name, :presence => true, :length => { :minimum => 2 }

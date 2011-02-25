@@ -1,5 +1,13 @@
 Es::Application.routes.draw do
   
+  resources :gamerooms
+  resources :comments
+  resources :blogs
+  resources :subscriptions
+  resources :markets
+  resources :test_questions
+  resources :classrooms
+  resources :games
   resources :students
   resources :student_sessions
   resources :teachers
@@ -8,8 +16,8 @@ Es::Application.routes.draw do
   resources :admin_sessions
   
   # Admin Login/Logout Paths
-  match "admin-login" => "admin_sessions#check_session", :as => :account_login
-  match "admin-logout" => "admin_sessions#destroy", :as => :account_logout
+  match "admin-login" => "admin_sessions#check_session", :as => :admin_login
+  match "admin-logout" => "admin_sessions#destroy", :as => :admin_logout
   match "admin-dashboard" => "admins#admin_dashboard", :as => :admin_dashboard
   
   match "login" => "pages#login", :as => :login

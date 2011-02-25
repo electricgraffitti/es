@@ -1,0 +1,25 @@
+<%= form_for(@gameroom) do |f| %>
+  <% if @gameroom.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gameroom.errors.count, "error") %> prohibited this gameroom from being saved:</h2>
+
+      <ul>
+      <% @gameroom.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :game_id %><br />
+    <%= f.text_field :game_id %>
+  </div>
+  <div class="field">
+    <%= f.label :student_id %><br />
+    <%= f.text_field :student_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

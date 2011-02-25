@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110222023951) do
+ActiveRecord::Schema.define(:version => 20110225212349) do
 
   create_table "admin_sessions", :force => true do |t|
     t.datetime "created_at"
@@ -35,6 +35,69 @@ ActiveRecord::Schema.define(:version => 20110222023951) do
     t.string   "current_login_ip"
     t.string   "last_login_ip"
     t.boolean  "admin_user"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "assets", :force => true do |t|
+    t.integer  "teacher_id"
+    t.integer  "student_id"
+    t.integer  "blog_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
+  end
+
+  add_index "assets", ["blog_id"], :name => "index_assets_on_blog_id"
+  add_index "assets", ["student_id"], :name => "index_assets_on_student_id"
+  add_index "assets", ["teacher_id"], :name => "index_assets_on_teacher_id"
+
+  create_table "blogs", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "classrooms", :force => true do |t|
+    t.integer  "teacher_id"
+    t.integer  "student_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "classrooms", ["student_id"], :name => "index_classrooms_on_student_id"
+  add_index "classrooms", ["teacher_id"], :name => "index_classrooms_on_teacher_id"
+
+  create_table "comments", :force => true do |t|
+    t.integer  "blog_id"
+    t.string   "author"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["blog_id"], :name => "index_comments_on_blog_id"
+
+  create_table "gamerooms", :force => true do |t|
+    t.integer  "game_id"
+    t.integer  "student_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "gamerooms", ["game_id"], :name => "index_gamerooms_on_game_id"
+  add_index "gamerooms", ["student_id"], :name => "index_gamerooms_on_student_id"
+
+  create_table "games", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "markets", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -65,6 +128,11 @@ ActiveRecord::Schema.define(:version => 20110222023951) do
     t.datetime "updated_at"
   end
 
+  create_table "subscriptions", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "teacher_sessions", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -90,5 +158,13 @@ ActiveRecord::Schema.define(:version => 20110222023951) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "test_questions", :force => true do |t|
+    t.integer  "game_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "test_questions", ["game_id"], :name => "index_test_questions_on_game_id"
 
 end

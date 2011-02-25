@@ -25,6 +25,7 @@ class StudentsController < ApplicationController
   # GET /students/new.xml
   def new
     @student = Student.new
+    @student.assets.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,10 @@ class StudentsController < ApplicationController
   # GET /students/1/edit
   def edit
     @student = Student.find(params[:id])
+    
+    if @student.assets.blank?
+       @student.assets.build    
+    end
   end
 
   # POST /students

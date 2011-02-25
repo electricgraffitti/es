@@ -25,6 +25,13 @@
 
 class Student < ActiveRecord::Base
   
+  #Associations
+  belongs_to :classroom
+  has_one :teacher, :through => :classrooms
+  belongs_to :gameroom
+  has_many :games, :through => :gamerooms
+  has_many :assets, :dependent => :destroy
+  
   # Validations
   validates :first_name, :presence => true, :length => { :minimum => 2 }
   validates :last_name, :presence => true, :length => { :minimum => 2 }
@@ -32,6 +39,9 @@ class Student < ActiveRecord::Base
                     :length => {:minimum => 3, :maximum => 254},
                     :uniqueness => true,
                     :format => {:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i}
+                    
+  #Assets
+  accepts_nested_attributes_for :assets, :allow_destroy => true, :reject_if => lambda { |a| a[:attachment].blank? }
   
   # Authlogic
   acts_as_authentic do |c|
