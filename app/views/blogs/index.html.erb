@@ -12,6 +12,13 @@
 		<p>
 			<%= blog.body %>
 		</p>
+		<%= link_to "Add a Comment", new_comment_path(blog) %><br />
+		<% @comments.each do |bc| %>
+		<%= bc.created_at %><br />
+		<%= bc.author %><br />
+		<%= bc.body %>
+		<% end %>
+		
 	</div>
 	<% end %>
 </div>

@@ -11,9 +11,11 @@
 
 class Blog < ActiveRecord::Base
   
-  
+  #Validations
+  validates :title, :body, :presence => true
+    
   #Associations
-  has_many :comments
+  has_many :comments, :dependent => :destroy
   has_many :assets,  :dependent =>  :destroy
   
   

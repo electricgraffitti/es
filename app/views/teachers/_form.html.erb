@@ -16,11 +16,20 @@
     <%= f.label :username %><br />
     <%= f.text_field :username %>
   </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirmation" %>
+    <%= f.password_field :password_confirmation %>
+  </div>
 	<%= f.fields_for :assets do |asset_form| %>
 		<div class="field">
 			<%= asset_form.label :asset, "Upload an Avatar" %><br />
 			<%= asset_form.file_field :attachment, :size => 16 %>
 		</div>
+	<% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

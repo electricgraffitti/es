@@ -1,15 +1,5 @@
 <%= form_for(@gameroom) do |f| %>
-  <% if @gameroom.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@gameroom.errors.count, "error") %> prohibited this gameroom from being saved:</h2>
-
-      <ul>
-      <% @gameroom.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  	<%= render :partial => 'layouts/error_block', :locals => {:object => @gameroom} %>
 
   <div class="field">
     <%= f.label :game_id %><br />

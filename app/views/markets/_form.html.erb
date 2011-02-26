@@ -1,15 +1,5 @@
 <%= form_for(@market) do |f| %>
-  <% if @market.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@market.errors.count, "error") %> prohibited this market from being saved:</h2>
-
-      <ul>
-      <% @market.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<%= render :partial => 'layouts/error_block', :locals => {:object => @market} %>
 
   <div class="actions">
     <%= f.submit %>

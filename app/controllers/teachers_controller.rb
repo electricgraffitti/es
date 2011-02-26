@@ -40,8 +40,6 @@ class TeachersController < ApplicationController
     if @teacher.assets.blank?
        @teacher.assets.build      
     end
-      
-    end
   end
 
   # POST /teachers

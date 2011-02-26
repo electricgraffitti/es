@@ -14,5 +14,6 @@ class Comment < ActiveRecord::Base
   
   #Associations
   belongs_to :blog
+  belongs_to :student
   
 end

@@ -37,9 +37,9 @@ class Teacher < ActiveRecord::Base
   validates :first_name, :presence => true, :length => { :minimum => 2 }
   validates :last_name, :presence => true, :length => { :minimum => 2 }
   validates :email, :presence => true, 
-                    :length => {:minimum => 3, :maximum => 254},
                     :uniqueness => true,
-                    :format => {:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i}
+                    :email => true
+  validates :password, :confirmation => true
   
   # Authlogic
   acts_as_authentic do |c|

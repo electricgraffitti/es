@@ -29,10 +29,12 @@ class Admin < ActiveRecord::Base
   # Validations
   validates :first_name, :presence => true, :length => { :minimum => 2 }
   validates :last_name, :presence => true, :length => { :minimum => 2 }
+  validates :username, :presence => true, :uniqueness => true
   validates :email, :presence => true, 
-                    :length => {:minimum => 3, :maximum => 254},
                     :uniqueness => true,
-                    :format => {:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i}
+                    :email => true
+  validates :password, :confirmation => true
+
   
   # Authlogic
   acts_as_authentic do |c|

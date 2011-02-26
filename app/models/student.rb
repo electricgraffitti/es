@@ -31,14 +31,16 @@ class Student < ActiveRecord::Base
   belongs_to :gameroom
   has_many :games, :through => :gamerooms
   has_many :assets, :dependent => :destroy
+  has_many :comments
   
   # Validations
   validates :first_name, :presence => true, :length => { :minimum => 2 }
   validates :last_name, :presence => true, :length => { :minimum => 2 }
+  validates :username, :presence => true, :uniqueness => true
   validates :email, :presence => true, 
-                    :length => {:minimum => 3, :maximum => 254},
                     :uniqueness => true,
-                    :format => {:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i}
+                    :email => true
+  validates :password, :confirmation => true
                     
   #Assets
   accepts_nested_attributes_for :assets, :allow_destroy => true, :reject_if => lambda { |a| a[:attachment].blank? }

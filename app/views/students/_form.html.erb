@@ -1,5 +1,5 @@
 <%= form_for @student, :html => {:multipart => true} do |f| %>
-<%= render :partial => 'layouts/error_block', :locals => {:object => @student} %>
+  <%= render :partial => 'layouts/error_block', :locals => {:object => @student} %>
 
   <div class="field">
     <%= f.label :first_name %><br />
@@ -17,11 +17,20 @@
     <%= f.label :username %><br />
     <%= f.text_field :username %>
   </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirmation" %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
 	<%= f.fields_for :assets do |asset_form| %>
 		<div class="field">
 			<%= asset_form.label :assets, "Upload and Avatar" %><br />
 			<%= asset_form.file_field :attachment, :size => 16 %>
 		</div>
+	<% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
