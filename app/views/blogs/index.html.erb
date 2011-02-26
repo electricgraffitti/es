@@ -2,7 +2,7 @@
 	<h2 class="page_header">The Reactor Core</h2>
 	<% @blogs.each do |blog| %>
 	<div class="top_hr bottom_hr">
-		<%= image_tag(blog.assets.last.attachment.url(:medium), :class => "wrapped_image") %>
+		<%= image_tag(blog.assets.last.attachment.url(:small), :class => "wrapped_image") %>
 		<h3>
 			<%= (blog.title).titleize %>
 		</h3>

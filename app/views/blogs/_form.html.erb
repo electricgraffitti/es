@@ -1,21 +1,25 @@
-<%= form_for @blog, :html => {:multipart => true} do |f| %>
-	<%= render :partial => 'layouts/error_block', :locals => {:object => @blog} %>
+<div class="full_row">
+  <div class="column_2">
+    <%= form_for @blog, :html => {:multipart => true} do |f| %>
+      <%= render :partial => 'layouts/error_block', :locals => {:object => @blog} %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+      <div class="field">
+        <%= f.label :title %><br />
+        <%= f.text_field :title %>
+      </div>
+      <div class="field">
+        <%= f.label :body %><br />
+        <%= f.text_area :body %>
+      </div>
+      <%= f.fields_for :assets do |asset_form| %>
+        <div class="field">
+    	    <%= asset_form.label :asset, "Upload an image" %><br />
+    	    <%= asset_form.file_field :attachment, :size => 16 %>
+        </div>
+      <% end %>
+      <div class="field">
+        <%= f.submit %>
+      </div>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </div>
-	<%= f.fields_for :assets do |asset_form| %>
-		<div class="field">
-			<%= asset_form.label :asset, "Upload an image" %><br />
-			<%= asset_form.file_field :attachment, :size => 16 %>
-		</div>
-	<% end %>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
