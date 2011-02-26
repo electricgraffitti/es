@@ -1,6 +1,6 @@
 <div class="full_row">
   <div class="column_2">
-    <%= form_for(@comment) do |f| %>
+    <%= form_for [@blog, Comment.new] do |f| %>
       <%= render :partial => 'layouts/error_block', :locals => {:object => @comment} %>
   
       <div class="field">

@@ -7,13 +7,11 @@
 			<%= (blog.title).titleize %>
 		</h3>
 		<div class="sub_title">
-			<%= (blog.created_at).to_s(:nice_date) %>
+			<%= (blog.created_at).to_s(:table_date) %>
 		</div>
 		<p>
 			<%= blog.body %>
 		</p>
 		<%= link_to "Add a Comment", new_comment_path %><br />
 	</div>
-	<% end %>
-
 </div>

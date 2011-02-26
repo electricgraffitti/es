@@ -42,3 +42,9 @@ module Es
     config.filter_parameters += [:password]
   end
 end
+
+Time::DATE_FORMATS[:event_time] = "%A %B %d, at %I:%M %p"
+Date::DATE_FORMATS[:nice_date] = "%A, %B %d, %Y"
+Time::DATE_FORMATS[:table_date] = "%B %d %Y, at %I:%M %p"
+
+APPLICATION_NAME = "Reactor Core"
