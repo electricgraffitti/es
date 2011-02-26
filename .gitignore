@@ -8,6 +8,7 @@ public/attachments/*
 public/documents/*
 public/photos/*
 public/avatars/*
+public/assets/*
 public/message_attachments/*
 config/development.sphinx.conf
 db/sphinx/*
