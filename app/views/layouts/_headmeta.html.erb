@@ -19,6 +19,9 @@
 <%= stylesheet_link_tag 'jquiwidgets', 'alerts/jquery.alerts', :cache => true %>
 <%= stylesheet_link_tag 'application' %>
 
+<meta name="csrf-token" content="<%= form_authenticity_token %>" />
+<meta name="csrf-param" content="authenticity_token" />
+
 <script type="text/javascript" src="http://use.typekit.com/lat3ozo.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
