@@ -8,6 +8,7 @@
 #  body       :text
 #  created_at :datetime
 #  updated_at :datetime
+#  student_id :integer(4)
 #
 
 class Comment < ActiveRecord::Base

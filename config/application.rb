@@ -8,6 +8,7 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Es
   class Application < Rails::Application
+  config.paths.app.manifests 'app/manifests', :eager_load => false
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -42,3 +43,9 @@ module Es
     config.filter_parameters += [:password]
   end
 end
+
+Time::DATE_FORMATS[:event_time] = "%A %B %d, at %I:%M %p"
+Date::DATE_FORMATS[:nice_date] = "%A, %B %d, %Y"
+Time::DATE_FORMATS[:table_date] = "%B %d %Y, at %I:%M %p"
+
+APPLICATION_NAME = "Reactor Core"

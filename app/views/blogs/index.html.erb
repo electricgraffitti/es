@@ -2,23 +2,16 @@
 	<h2 class="page_header">The Reactor Core</h2>
 	<% @blogs.each do |blog| %>
 	<div class="top_hr bottom_hr">
-		<%= image_tag(blog.assets.last.attachment.url(:medium), :class => "wrapped_image") %>
+		<%= image_tag(blog.assets.last.attachment.url(:small), :class => "wrapped_image") %>
 		<h3>
 			<%= (blog.title).titleize %>
 		</h3>
 		<div class="sub_title">
-			<%= (blog.created_at).to_s(:nice_date) %>
+			<%= (blog.created_at).to_s(:table_date) %>
 		</div>
 		<p>
 			<%= blog.body %>
 		</p>
-		<%= link_to "Add a Comment", new_comment_path(blog) %><br />
-		<% @comments.each do |bc| %>
-		<%= bc.created_at %><br />
-		<%= bc.author %><br />
-		<%= bc.body %>
-		<% end %>
-		
+		<%= link_to "Add a Comment", new_comment_path %><br />
 	</div>
-	<% end %>
 </div>
