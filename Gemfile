@@ -1,19 +1,13 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.4'
+gem 'rails', '3.0.6'
 gem 'mysql2'
-gem 'annotate', '2.4.0'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
 gem 'capistrano'
 gem 'authlogic'
 gem 'rails3-generators'
 gem 'paperclip'
 gem 'chargify_api_ares'
-gem 'rails-geocoder', :require => "geocoder"
+gem 'geocoder', :require => "geocoder"
 
 group :development do
   gem 'rspec-rails'
