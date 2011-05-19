@@ -197,6 +197,7 @@ vertical-align: text-bottom;
 /* hand cursor on clickable input elements */
 label,input[type=button],input[type=submit],button {
 cursor: pointer;
+clear:both;
 }
 /* webkit browsers add a 2px margin outside the chrome of form elements */
 button,input,select,textarea {
@@ -930,7 +931,7 @@ footer .content_edge {
 	height: 100px;
 }
 .footer_nav {
-	padding-top: 30px;
+	padding-top: 24px;
 }
 .footer_nav ul {
 height: 15px;
@@ -1016,7 +1017,7 @@ form label {
 margin-bottom: 3px;
 font-weight: bold;
 }
-input[type="text"] {
+input[type="text"], input[type="password"] {
 margin-top: 3px;
 padding: 3px;
 }
