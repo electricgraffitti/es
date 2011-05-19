@@ -21,7 +21,7 @@ Es::Application.routes.draw do
   match "admin-dashboard" => "admins#admin_dashboard", :as => :admin_dashboard
   
   match "login" => "pages#login", :as => :login
-  match "logout" => "pagens#logout", :as => :logout
+  match "logout" => "pages#logout", :as => :logout
   
   match "student-login" => "students#new", :as => :student_login
   match "student-logout" => "students#destroy", :as => :student_logout

@@ -902,6 +902,11 @@ height: 340px;
 position: relative;
 width: 960px;
 }
+/*************************************************************************************************************************************/
+/******************************************************************************************************** LOGINS *********************/
+.teacher_form {
+	padding: 0px 20px;
+}
 
 /*************************************************************************************************************************************/
 /****************************************************************************************************** SUB BOXES ********************/
@@ -959,7 +964,39 @@ text-decoration: underline;
 }
 /*************************************************************************************************************************************/
 /****************************************************************************************************** BUTTONS **********************/
-
+.btn {
+  color: #FFFFFF;
+  float: left;
+  margin-top: 20px;
+  padding: 5px 20px;
+  position: relative;
+  text-align: center;
+	border: 1px solid #666;
+	background: #0b2ebc; /* Old browsers */
+	background: -moz-linear-gradient(top, #0b2ebc 0%, #031267 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0b2ebc), color-stop(100%,#031267)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #0b2ebc 0%,#031267 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #0b2ebc 0%,#031267 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #0b2ebc 0%,#031267 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0B2EBC', endColorstr='#031267',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #0b2ebc 0%,#031267 100%); /* W3C */
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-opera-border-radius: 3px;
+	border-radius: 3px;
+	behavior: url(PIE.htc);
+}
+.btn:hover {
+	background: #031267; /* Old browsers */
+	background: -moz-linear-gradient(top, #031267 0%, #082c8e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#031267), color-stop(100%,#082c8e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #031267 0%,#082c8e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #031267 0%,#082c8e 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #031267 0%,#082c8e 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#031267', endColorstr='#082C8E',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #031267 0%,#082c8e 100%); /* W3C */
+	behavior: url(PIE.htc);
+}
 /*************************************************************************************************************************************/
 /****************************************************************************************************** FORMS ************************/
 .admin_form_wrap {
