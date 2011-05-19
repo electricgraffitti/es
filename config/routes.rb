@@ -39,6 +39,9 @@ Es::Application.routes.draw do
   match "#{APP[:application_name]}-terms-and-conditions" => "pages#terms", :as => :terms
   match "#{APP[:application_name]}-faqs" => "pages#faq", :as => :faq
   
+  # Game Paths
+  match "game-login" => "games#new", :as => :game_login
+  
   root :to => "pages#index"
 
 end

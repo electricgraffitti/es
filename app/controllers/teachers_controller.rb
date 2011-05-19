@@ -1,4 +1,5 @@
 class TeachersController < ApplicationController
+  
   # GET /teachers
   # GET /teachers.xml
   def index

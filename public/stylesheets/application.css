@@ -560,8 +560,8 @@ padding: 10px;
 .full_row {
 position: relative;
 float: left;
-width: 960px;
-padding-top: 20px;
+width: 920px;
+padding: 20px 20px 20px;
 }
 .no_top {
 padding-top: 0px;
@@ -997,6 +997,17 @@ text-decoration: underline;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#031267', endColorstr='#082C8E',GradientType=0 ); /* IE6-9 */
 	background: linear-gradient(top, #031267 0%,#082c8e 100%); /* W3C */
 	behavior: url(PIE.htc);
+}
+.actions {
+	position: relative;
+	float: left;
+}
+.cancel_link {
+	position: relative;
+	float: left;
+	display:block;
+	margin-left: 20px;
+	padding-top: 25px;
 }
 /*************************************************************************************************************************************/
 /****************************************************************************************************** FORMS ************************/
