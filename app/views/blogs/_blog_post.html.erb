@@ -20,8 +20,8 @@
     <%= markdown(blog.body) %>
   </div>
   <% if current_admin %>
-  <div class="field">
-    <%= link_to "Edit Post", edit_blog_path(blog) %><br />
+    <div class="field">
+      <%= link_to "Edit Post", edit_blog_path(blog) %><br />
+    </div>
   <% end %>
-  </div>
 </div>
