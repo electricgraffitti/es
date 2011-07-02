@@ -1,14 +1,20 @@
 <div class="footer_nav clearfix">
 	<ul>
 		<li><%= link_to "Home", root_path %></li>
-		<li><%= link_to "Link", "" %></li>
-		<li><%= link_to "Link", "" %></li>
-		<li><%= link_to "Link", "" %></li>
+		<li><%= link_to "Teachers", teachers_path %></li>
 		<li><%= link_to "About", about_path %></li>
     <li><%= link_to "Contact", contact_path %></li>
-		<li><%= link_to "Privacy Policy", privacy_path %></li>
+		<li><%= link_to "Reaction News", blogs_path %></li>
+    <li><%= link_to "Nuclear Industry Professionals", nip_path %></li>
 		<li><%= link_to "FAQ", faq_path %></li>
-		<li><%= link_to "Terms of Service", terms_path %></li>
+		<li>
+		<% if current_admin %>
+		  <li><%= link_to "Dashboard", admin_dashboard_path %></li>
+		<% else %>
+		  <li><%= link_to "Admin", admin_login_path %></li>
+		<% end %>
+		<li><%#= link_to "Privacy Policy", privacy_path %></li>
+  	<li><%#= link_to "Terms of Service", terms_path %></li>
 	</ul>
 	<%= render :partial => 'layouts/c2link' %>
 </div>

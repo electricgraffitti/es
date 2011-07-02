@@ -23,6 +23,9 @@
         <div class="content_edge content_edge_bl"></div>
         <div class="content_edge content_edge_br"></div>
         <%= yield %>
+        <div id="content_disclaimer">
+          <%= render :partial => "layouts/content_disclaimer" %>
+        </div>
       </div>
       <div class="content_bottom"></div>
     </div>

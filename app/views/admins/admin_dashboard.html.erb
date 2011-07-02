@@ -1,0 +1,12 @@
+<% content_for :title do %>
+  | Admin Dashboard
+<% end %>
+
+<div class="full_row inner_content no_top">
+	<h2 class="page_header">Admin Dashboard</h2>
+  <%= render :partial => 'admins/admin_blogs', :locals => {:blogs => @blogs} %>
+
+</div>
+<% content_for :javascripts do  %>
+  <%= javascript_include_tag "admin", :cache => true %>
+<% end %>

@@ -72,6 +72,11 @@ class AdminsController < ApplicationController
   
   def admin_dashboard
     
+    @blogs = Blog.order("created_at DESC")
+    
+    respond_to do |format|
+      format.html 
+    end
   end
   
 end

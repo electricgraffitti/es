@@ -1,0 +1,27 @@
+<div class="news_listing inner_content">
+  <%= image_tag(blog.assets.last.attachment.url(:thumb), :alt => blog.title) %>
+  <div class="retweet_links">
+    <%#= link_to "#{blog.title}", blog_path(blog), :class => "retweet vert" %>
+  </div>
+
+  <div class="listing_title">
+    <%= blog.title %>
+  </div>
+
+  <div class="listing_sub_title">
+    by <%= blog.author %><br/>
+    <%= blog.author_title %><br/>
+  </div>
+
+  <div class="listing_time">
+    Posted on: <%= (blog.created_at).to_s(:pretty) %>
+  </div>
+  <div class="listing_content">
+    <%= markdown(blog.body) %>
+  </div>
+  <% if current_admin %>
+  <div class="field">
+    <%= link_to "Edit Post", edit_blog_path(blog) %><br />
+  <% end %>
+  </div>
+</div>

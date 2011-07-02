@@ -22,5 +22,4 @@ class Blog < ActiveRecord::Base
   #Assets
   accepts_nested_attributes_for :assets, :allow_destroy => true, :reject_if => lambda { |a| a[:attachment].blank? }
   
-  
 end

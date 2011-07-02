@@ -8,10 +8,9 @@
   	<div id="slider" class="index_banner">
       <div class="scroll">
         <div class="scrollContainer">
-          <%= render :partial => 'pages/index_banner', :locals => {:banner_id => "1"} %>
-          <%= render :partial => 'pages/index_banner', :locals => {:banner_id => "2"} %>
-          <%= render :partial => 'pages/index_banner', :locals => {:banner_id => "3"} %>
-          <%= render :partial => 'pages/index_banner', :locals => {:banner_id => "4"} %>
+          <%= render :partial => 'pages/index_banner_1', :locals => {:banner_id => "1"} %>
+          <%= render :partial => 'pages/index_banner_2', :locals => {:banner_id => "2"} %>
+          <%= render :partial => 'pages/index_banner_3', :locals => {:banner_id => "3"} %>
         </div>
       </div>
     </div>
@@ -21,7 +20,6 @@
         <li><%= link_to "banner1", "#banner_1" %></li>
         <li><%= link_to "banner2", "#banner_2" %></li>
         <li><%= link_to "banner3", "#banner_3" %></li>
-        <li><%= link_to "banner4", "#banner_4" %></li>
       </ul>
     </div>
   </div>

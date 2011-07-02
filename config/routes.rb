@@ -1,5 +1,7 @@
 Es::Application.routes.draw do
   
+  match "mark_it_up/preview" => "mark_it_up#preview"
+
   resources :gamerooms
   resources :comments
   resources :blogs
@@ -33,11 +35,12 @@ Es::Application.routes.draw do
   match "password-reset-submit" => "password_reset#create", :as => :password_submit_reset
   
   # Custom Routes
-  match "contact-#{APP[:application_name]}" => "pages#contact", :as => :contact
-  match "about-#{APP[:application_name]}" => "pages#about", :as => :about
-  match "#{APP[:application_name]}-privacy-policy" => "pages#privacy", :as => :privacy
-  match "#{APP[:application_name]}-terms-and-conditions" => "pages#terms", :as => :terms
-  match "#{APP[:application_name]}-faqs" => "pages#faq", :as => :faq
+  match "contact-energy-solutions" => "pages#contact", :as => :contact
+  match "about-energy-solutions" => "pages#about", :as => :about
+  match "energy-solutions-privacy-policy" => "pages#privacy", :as => :privacy
+  match "energy-solutions-terms-and-conditions" => "pages#terms", :as => :terms
+  match "energy-solutions-faqs" => "pages#faq", :as => :faq
+  match "energy-solutions-nuclear_industry_professional" => "pages#nuclear_industry_professional", :as => :nip
   
   # Game Paths
   match "game-login" => "games#new", :as => :game_login

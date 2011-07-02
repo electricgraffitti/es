@@ -1,0 +1,29 @@
+<div class="admin_segment">
+  <h3>Current News</h3>
+  <div class="table_actions">
+    <%= link_to 'Add News Article', new_blog_path, :class => "btn" %>
+  </div>
+  <table id="dashboard_blogs_table" class="display">
+    <thead>  
+      <tr>
+        <th>Title</th>
+				<th>Author</th>
+        <th>Edit Post</th>
+        <th>Delete Post</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% blogs.each do |blog| %>
+			<% unless blog.blank? %>
+        <tr>
+          <td><%= (blog.title).titleize %></td>
+          <td><%= (blog.author).titleize %></td>
+          <td><%= link_to 'Update Post', edit_blog_path(blog), :class => "update" %></td>
+          <td><%= link_to 'Delete Post', blog, :confirm => 'Are you sure?', :method => :delete, :class => "delete" %></td>
+        </tr>
+			<% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

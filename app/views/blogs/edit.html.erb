@@ -1,6 +1,9 @@
-<h1>Edit blog</h1>
+<% content_for :title do %>
+  | Edit Blog Post
+<% end %>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @blog %> |
-<%= link_to 'Back', blogs_path %>
+<div class="full_row inner_content no_top">
+	<h2 class="page_header">Edit <%= (@blog.title).titleize if @blog %></h2>
+	<%= link_to 'Back', admin_dashboard_path, :class => "right" %>
+  <%= render :partial => 'blogs/form', :locals => {:blog => @blog, :button_text => "Update Post"} %>
+</div>

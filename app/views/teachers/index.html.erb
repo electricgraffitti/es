@@ -1,3 +1,52 @@
-<div class="full_row no_top">
-	<h2 class="page_header">Teachers Listings</h2>
+<% content_for :title do %>
+  | Teacher Information
+<% end %>
+
+<div class="full_row no_top inner_content">
+	<h2 class="page_header">Teachers</h2>
+	<div class="page_quote right">
+	  <div class="quote">"When a game challenges a player to think like a professional, the  role-play experience can be highly motivating in inspiring students to pursue STEM careers."</div>
+	  <div class="quote_signature"><span class="bold">Dr. Leslie Miller</span>, Executive Director of the Center for Technology in Teaching and Learning at Rice University</div>
+	</div>
+	  <p><span class="bold">Core Reaction</span> is an engaging, story-based game that lets <span class="bold">students explore careers</span> in nuclear energy – while at the same time, practicing and perfecting their understanding of middle school <span class="bold">science!</span></p>
+	  <p>Imagine Education and the EnergySolutions Foundation are currently developing the game, with an anticipated release date of spring 2013. <%= link_to "Sign Up", "#" %> today to learn more about the game and to be one of the <span class="bold">first</span> to know when it is available!</p>
+	  <p>
+	   <span class="bold">Core Reaction</span> will compliment a wide range of <span class="bold">science</span> curriculum for <span class="bold">grades 6 through 8.</span> It‘s unique use of scientific exploration, within a story-based, role-playing game, has been carefully designed to both <span class="bold">teach <span class="underline">and</span> inspire</span> students! 
+	  </p>
+	  <h3 class="page_sub_header">Core Reaction offers your classroom:</h3>
+	  <p>
+	    <ul class="true_list">
+      <li><span class="bold">Free online game play</span>, where students work together to create the energy demanded by a futuristic city.</li>  
+      <li><span class="bold">Multi-player and single-player game features</span>, so that an entire class, a small study group or single student can play.</li>
+      <li><span class="bold">Easy-to-use assessments</span> to measure student knowledge, along with supplemental activities and resources (provided online).</li> 
+      <li><span class="bold">Flexible scheduling:</span> Students can play the game once, in one role, in approximately 18 minutes for a comprehensive experience – while having the option to play up to four more times in different roles!</li>
+      <li><span class="bold">A fun format, with meaningful results.</span> Research regarding online science games found that students showed significant knowledge gains after as little as 30 minutes of exposure to the game.<sup><%= link_to "1", "#sup1" %></sup></li>
+      </ul>
+	  </p>
+	  <h3 class="page_sub_header">Educational benchmarks will include:</h3>
+	  <p>
+      <ul class="true_list">
+        <li>An authentic and accurate overview of nuclear energy and the nuclear fuel cycle; </li>  
+        <li>Science content aligned to <%= link_to "National Science Education Standards.", "http://www.nap.edu/openbook.php?record_id=4962&page=1", :target => "_blank" %></li>
+      </ul>
+	  </p>
+	  <h2 class="page_header">And, it’s a critical career exploration opportunity.</h2>
+	  <p>
+      Nuclear energy provides nearly 20% of the nation’s electricity<sup><%= link_to "2", "#sup2" %></sup> and 70% of the nation’s zero-emission electricity.<sup><%= link_to "3", "#sup3" %></sup> Core Reaction allows students to understand how nuclear energy is created and the role it plays in our nation’s energy mix.
+	  </p>
+	  <p>
+	   At the same time, <span class="bold">Core Reaction</span> introduces students to a wide range of career opportunities in a growing industry that most students know very little of. Current estimates indicate that the nuclear energy field will need 25,000 more employees by 2015 just to maintain its current workforce.<sup><%= link_to "4", "#sup4" %></sup> <span class="bold">Core Reaction</span> has the potential to motivate students to pursue STEM careers and spark interest in working in the nuclear energy industry. 
+	  </p>
+</div>
+<div class="full_row inner_content credits_box">
+  <div id="sup1" class="credit"><sup>1</sup> Leslie M. Miller, Jannette Moreno, Vicky Estrera, and David Lane. "Efficacy of MedMyst: an Internet Teaching Tool for Middle School Microbiology." American Society for Microbiology 5 (May 2004)13-20.</div>
+  <div id="sup2" class="credit"><sup>2</sup> 
+    <%= link_to "Nuclear Energy Institute: U.S. Needs New Nuclear Plants to Meet Energy Demand, Maintain Supply Diversity", "http://www.nei.org/resourcesandstats/documentlibrary/newplants/policybrief/usneedsnewplants/", :target => "_blank" %>
+  </div>
+  <div id="sup3" class="credit"><sup>3</sup> 
+    <%= link_to "Nuclear Energy Institute: Nuclear Energy Plays Essential Role in Climate Change Initiatives", "http://www.nei.org/resourcesandstats/documentlibrary/protectingtheenvironment/policybrief/nuclearenergyclimatechangeinitiatives/", :target => "_blank" %>
+  </div>
+  <div id="sup4" class="credit"><sup>4</sup> 
+    <%= link_to "Nuclear Energy Institute: Nuclear Industry's Comprehensive Approach Develops Skilled Work Force for the Future", "http://www.nei.org/resourcesandstats/documentlibrary/newplants/factsheet/nuclearindustrydevelopsworkforce/", :target => "_blank" %>
+  </div>
 </div>

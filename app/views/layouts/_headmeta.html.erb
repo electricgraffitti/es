@@ -1,4 +1,4 @@
-<title><%= "Energy Solutions | Cool Video Game" + h(yield(:title)) %> </title>
+<title><%= "Energy Solutions | Core Reaction Nuclear Education Game " + h(yield(:title)) %> </title>
 <meta charset="utf-8">
 <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
      Remove this if you use the .htaccess -->
@@ -22,8 +22,7 @@
 <meta name="csrf-token" content="<%= form_authenticity_token %>" />
 <meta name="csrf-param" content="authenticity_token" />
 
-<script type="text/javascript" src="http://use.typekit.com/lat3ozo.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<!-- <script type="text/javascript" src="http://use.typekit.com/lat3ozo.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
 
-<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-<%= javascript_include_tag "modernizr" %>
+<%= javascript_include_tag "preload" %>

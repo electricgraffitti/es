@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110226055358) do
+ActiveRecord::Schema.define(:version => 20110702200824) do
 
   create_table "admin_sessions", :force => true do |t|
     t.datetime "created_at"
@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(:version => 20110226055358) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "author"
+    t.string   "author_title"
   end
 
   create_table "classrooms", :force => true do |t|

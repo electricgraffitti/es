@@ -1,18 +1,18 @@
-<div class="full_row no_top">
-	<h2 class="page_header">The Reactor Core</h2>
-	<% @blogs.each do |blog| %>
-	<div class="top_hr bottom_hr">
-		<%= image_tag(blog.assets.last.attachment.url(:small), :class => "wrapped_image") %>
-		<h3>
-			<%= (blog.title).titleize %>
-		</h3>
-		<div class="sub_title">
-			<%= (blog.created_at).to_s(:table_date) %>
-		</div>
-		<p>
-			<%= blog.body %>
-		</p>
-		<%= link_to "Add a Comment", new_comment_path %><br />
-	</div>
-	<% end %>
+<% content_for :title do %>
+  | Reaction News
+<% end %>
+
+<div class="full_row inner_content">
+  <h2 class="page_header">Recent News</h2>
+  <%= render :partial => 'blogs/blog_post', :locals => {:blog => @blog} %>
 </div>
+
+<div class="full_row inner_content">
+  <h2 class="page_header">Archived News</h2>
+  <% @blogs.each do |blog| %>
+    <% unless blog.id == @blog.id %>
+      <%= render :partial => 'micro_post', :locals => {:blog => blog} %>
+    <% end %>
+  <% end %>
+</div>
+

@@ -20,6 +20,10 @@ class PagesController < ApplicationController
   def faq
   end
   
+  def nuclear_industry_professional
+    
+  end
+  
   def terms
   end
   
