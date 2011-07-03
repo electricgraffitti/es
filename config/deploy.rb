@@ -1,1 +1,1 @@
-server 'verisk1', :app, :web, :db, :primary => true
+server 'node2', :app, :web, :db, :primary => true
