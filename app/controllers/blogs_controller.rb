@@ -10,6 +10,8 @@ class BlogsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @blogs }
+      format.rss { render :layout => false }
+      format.atom { render :action => 'index',:layout => false }
     end
   end
 
