@@ -1,6 +1,78 @@
 <% content_for :title do %>
-  Contact <%= APP[:application_name] %>
+  | Get Involved Today 
 <% end %>
-<div class="full_row">
-  <h2>Contact</h2>
+<div class="full_row inner_content">
+  <div class="cta_row rss_feed right">
+    <%= image_tag("feed.png") %>
+    <%= link_to "Subscribe to our feed", blogs_url(:rss), :class => "rss_button" %>
+  </div>
+  <h2 class="page_header page_header_with_cta">Contact Core Reaction</h2>
 </div>
+<div class="full_row inner_content">
+  <div class="column_2">
+    <%= form_tag general_form_path do %>
+      <div class="field">
+        <%= label_tag "first_name", "First Name" %><br/>
+        <%= text_field_tag "first_name" %>
+      </div>
+      <div class="field">
+        <%= label_tag "last_name", "Last Name" %><br/>
+        <%= text_field_tag "last_name" %>
+      </div>
+      <div class="field">
+        <%= label_tag "email", "Email Address" %><br/>
+        <%= text_field_tag "email" %>
+      </div>
+      <div class="field">
+        <%= radio_button_tag "inquiry_type", "general", true, :class => "radio_buttons" %>
+        <%= label_tag "inquiry_type", "General Inquiry", :class => "radio_button_label" %><br/>
+
+        <%= radio_button_tag "inquiry_type", "parent", nil, :class => "radio_buttons" %>
+        <%= label_tag "inquiry_type", "Parent Inquiry", :class => "radio_button_label" %><br/>
+        
+        <%= radio_button_tag "inquiry_type", "teacher", nil, :class => "radio_buttons" %>
+        <%= label_tag "inquiry_type", "Teacher Inquiry", :class => "radio_button_label" %><br/>
+        
+        <%= radio_button_tag "inquiry_type", "nuclear_industry_professional", nil, :class => "radio_buttons" %>
+        <%= label_tag "inquiry_type", "Nuclear Industry Professional Inquiry", :class => "radio_button_label" %><br/>
+        
+        <%= radio_button_tag "inquiry_type", "other", nil, :class => "radio_buttons" %>
+        <%= label_tag "inquiry_type", "Other Inquiry", :class => "radio_button_label" %><br/>
+        
+      </div>
+      <div class="field">
+        <%= check_box_tag "involved_interest", "I am interested in participating in the development of Core Reaction." %>
+        <%= label_tag "involved_interest" %>
+      </div>
+      <div id="teacher_fields">
+        <div class="field">
+          <%= label_tag "teacher_subject", "Subject" %><br/>
+          <%= text_field_tag "teacher_subject" %>
+        </div>
+        <div class="field">
+          <%= label_tag "teacher_grade", "Grade" %><br/>
+          <%= text_field_tag "teacher_grade" %>
+        </div>
+      </div>
+      <div class="field">
+        <%= check_box_tag "notify_me" %>
+        <%= label_tag "notify_me", "Notify me when game releases" %>
+      </div>
+      <div class="field">
+        <%= label_tag "comments" %>
+        <%= text_area_tag "comments", nil, :rows => 7, :cols => 56 %>
+      </div>
+      <div class="field">
+        <%= submit_tag "Send Message", :class => "btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<% content_for :javascripts do %>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+      forms.showTeacherFields();
+    });
+  </script>
+<% end %>

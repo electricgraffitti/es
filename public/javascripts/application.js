@@ -37,6 +37,38 @@ var flash = {
 
 };
 
+var forms = {
+	
+	hideTeacherFields: function() {
+		var teacherFields = $("#teacher_fields");
+		teacherFields.hide();
+	},
+	
+	showTeacherFields: function() {
+		var allRadios = $(".radio_buttons"),
+				teacherRadio = $("#inquiry_type_teacher"),
+				teacherFields = $("#teacher_fields"),
+				involvedCheckBox = $("#involved_interest");
+				
+		allRadios.click(function() {
+			if (teacherRadio.is(':checked') && involvedCheckBox.is(':checked')) {
+				teacherFields.slideDown();
+			} else {
+				teacherFields.slideUp();
+			}
+		});
+		
+		involvedCheckBox.click(function() {
+			if (teacherRadio.is(':checked') && involvedCheckBox.is(':checked')) {
+				teacherFields.slideDown();
+			} else {
+				teacherFields.slideUp();
+			}
+		});
+	}
+	
+};
+
 var base = {
 	
 	indexBanners: function() {

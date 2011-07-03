@@ -1,21 +1,6 @@
 Es::Application.routes.draw do
   
   match "mark_it_up/preview" => "mark_it_up#preview"
-
-  resources :gamerooms
-  resources :comments
-  resources :blogs
-  resources :subscriptions
-  resources :markets
-  resources :test_questions
-  resources :classrooms
-  resources :games
-  resources :students
-  resources :student_sessions
-  resources :teachers
-  resources :teacher_sessions
-  resources :admins
-  resources :admin_sessions
   
   # Admin Login/Logout Paths
   match "admin-login" => "admin_sessions#check_session", :as => :admin_login
@@ -42,8 +27,26 @@ Es::Application.routes.draw do
   match "energy-solutions-faqs" => "pages#faq", :as => :faq
   match "energy-solutions-nuclear_industry_professional" => "pages#nuclear_industry_professional", :as => :nip
   
+  # Mailer Paths
+  match "core-reaction-contact-form" => "notifications#general_contact", :as => :general_form
+  
   # Game Paths
   match "game-login" => "games#new", :as => :game_login
+  
+  resources :gamerooms
+  resources :comments
+  resources :blogs
+  resources :subscriptions
+  resources :markets
+  resources :test_questions
+  resources :classrooms
+  resources :games
+  resources :students
+  resources :student_sessions
+  resources :teachers
+  resources :teacher_sessions
+  resources :admins
+  resources :admin_sessions
   
   root :to => "pages#index"
 

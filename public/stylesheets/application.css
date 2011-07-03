@@ -338,7 +338,7 @@ behavior:url(PIE.htc);}
 .cancel_link{position:relative;float:left;display:block;margin-left:20px;padding-top:25px;}
 .page_cta{float:right;margin-top:35px;position:relative;}
 .cta_row{float:right;margin-top:35px;padding-right:20px;position:relative;}
-.cta_button{color:#FFFFFF;margin-top:0px;padding: 9px 20px 5px 56px;text-decoration:none;font-size:17px;position:relative;text-align:center;border:1px solid #666;background:#0b2ebc;/* Old browsers */
+.cta_button{color:#FFFFFF;margin-top:0px;padding: 9px 20px 5px 73px;text-decoration:none;font-size:17px;position:relative;text-align:center;border:1px solid #666;background:#0b2ebc;/* Old browsers */
 background:-moz-linear-gradient(top,#0b2ebc 0%,#031267 100%);/* FF3.6+ */
 background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#0b2ebc),color-stop(100%,#031267));/* Chrome,Safari4+ */
 background:-webkit-linear-gradient(top,#0b2ebc 0%,#031267 100%);/* Chrome10+,Safari5.1+ */
@@ -348,7 +348,7 @@ filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#0B2EBC',endCo
 background:linear-gradient(top,#0b2ebc 0%,#031267 100%);/* W3C */
 -webkit-border-radius:3px;-moz-border-radius:3px;-opera-border-radius:3px;border-radius:3px;box-shadow:0 2px 2px #000000;-moz-box-shadow:0 2px 2px #000000;-webkit-box-shadow:0 2px 2px #000000;-o-box-shadow:0 2px 2px #000000;behavior:url(PIE.htc);}
 .cta_button:hover{box-shadow:0 0px 1px #000000;-moz-box-shadow:0 0px 1px #000000;-webkit-box-shadow:0 0px 1px #000000;-o-box-shadow:0 0px 1px #000000;behavior:url(PIE.htc);}
-a.cta_button:active,a.cta_button:visited {color:#fff;}
+a.cta_button:active,a.cta_button:visited, a.rss_button:active, a.rss_button:visited {color:#fff;}
 .rss_button {color:#FFFFFF;margin-top:0px;padding: 9px 20px 5px 56px;text-decoration:none;font-size:17px;position:relative;text-align:center;border:1px solid #666;background:#0b2ebc;/* Old browsers */
 background:-moz-linear-gradient(top,#0b2ebc 0%,#031267 100%);/* FF3.6+ */
 background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#0b2ebc),color-stop(100%,#031267));/* Chrome,Safari4+ */
@@ -372,6 +372,26 @@ background:linear-gradient(top,#0b2ebc 0%,#031267 100%);/* W3C */
 form label{margin-bottom:3px;font-weight:bold;}
 input[type="text"],input[type="password"]{margin-top:3px;padding:3px;}
 select{padding:3px;}
+form div.field {
+float: left;
+margin: 10px 20px 0;
+position: relative;
+text-align: left;
+width: 440px;
+}
+form div.field label {
+position: relative;
+}
+form div.field input[type="text"],form div.field input[type="password"] {
+	width: 240px;
+}
+.radio_button_label {
+	display: inline-block;
+  padding-bottom: 8px;
+}
+#teacher_fields {
+	display:none;
+}
 /*************************************************************************************************************************************/
 /****************************************************************************************************** OVERLAY **********************/
 /* the overlayed element */
