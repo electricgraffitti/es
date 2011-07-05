@@ -1,6 +1,6 @@
 <div class="micro_listing">
-  <%= image_tag(blog.assets.last.attachment.url(:tiny), :alt => blog.title) %>
-  <h3 class="page_sub_header"><%= blog.title %></h3>
+  <%= link_to image_tag(blog.assets.last.attachment.url(:tiny), :alt => blog.title), blog_path(blog) %>
+  <h3 class="page_sub_header"><%= link_to "#{blog.title}", blog_path(blog) %></h3>
   <div class="author_creds">by <%= blog.author %></div>
   <div class="timestamps">Posted on: <%= (blog.created_at).to_s(:pretty) %></div>
 </div>
