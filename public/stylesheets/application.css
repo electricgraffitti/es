@@ -483,6 +483,12 @@ a:hover.client_view{color:#970707;}
 	width: 918px;
 }
 .micro_listing img{-moz-box-shadow:1px 1px 3px #999999;border:1px solid #ccc;padding:5px;float:left;margin-right:10px;}
+.micro_img_link {
+	cursor: pointer;
+ 	display: block;
+ 	float: left;
+ 	position: relative;
+ 	z-index: 2;}
 .micro_listing .page_sub_header, .micro_listing .author_creds, .micro_listing .timestamps {
 	position: relative;
 }
