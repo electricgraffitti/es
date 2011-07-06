@@ -69,6 +69,35 @@ var forms = {
 	
 };
 
+var video = {
+	
+	adminVideo: function() {
+		flowplayer("video", "/flowplayer-3.2.7.swf", {
+  		clip: {
+  			url: '../videos/ES.m4v'
+  		},
+  		plugins: {
+      	controls: {
+        	url: '/flowplayer.controls-3.2.5.swf',
+          playlist: false,
+          backgroundColor: '#000', 
+          height: 18,
+          time: false,
+          fullscreen: true,
+          volume: false,
+          bufferColor: '#666666',
+          buttonColor: '#666666',
+          tooltips: {
+          	buttons: true, 
+            fullscreen: 'Fullscreen' 
+          } 
+        }
+  		}
+  	});
+	}
+	
+}
+
 var base = {
 	
 	indexBanners: function() {

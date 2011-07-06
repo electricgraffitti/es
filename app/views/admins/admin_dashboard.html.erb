@@ -3,10 +3,19 @@
 <% end %>
 
 <div class="full_row inner_content no_top">
+  <div id="video"></div>
+</div>
+
+<div class="full_row inner_content no_top">
 	<h2 class="page_header">Admin Dashboard</h2>
   <%= render :partial => 'admins/admin_blogs', :locals => {:blogs => @blogs} %>
-
 </div>
+
 <% content_for :javascripts do  %>
-  <%= javascript_include_tag "admin", :cache => true %>
+  <%= javascript_include_tag "admin", "flowplayer", :cache => true %>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      video.adminVideo();
+    });
+  </script>
 <% end %>

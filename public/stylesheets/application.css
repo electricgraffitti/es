@@ -445,7 +445,7 @@ border-radius:0px;-webkit-border-radius:0px;-moz-border-radius:0px;box-shadow:0 
 .admin_panel .admin_btn:hover{color:#fff;;}
 .admin_panel h3{font-family:Helvetica,Arial,sans-serif;color:#fff;}
 .dark_shadow{text-shadow:0 1px 0 #000;}
-/*******Policy Page**********/
+
 #policy_page ol li ul{margin-left:15px;}
 #policy_page ul li{line-height:18.35px;margin-bottom:10px;list-style-type:disc;}
 .admin_panel a.update{color:green;text-decoration:none;}
@@ -453,6 +453,14 @@ border-radius:0px;-webkit-border-radius:0px;-moz-border-radius:0px;box-shadow:0 
 .admin_panel a:hover{color:#fff;}
 .table_actions{position:absolute;top:0px;right:0px;}
 .table_actions a.btn{margin-top:0px;}
+
+#video {
+	position: relative;
+	float:left;
+	width: 512px;
+	height: 288px;
+	margin-top: 20px;
+}
 /*************************************************************************************************************************************/
 /******************************************************************************************************* BLOG POSTS ******************/
 .news_listing{position:relative;text-align:left;padding:20px 0px;}
