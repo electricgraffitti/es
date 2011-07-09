@@ -186,6 +186,7 @@ p{margin:5px 0px 0px;line-height:19.35px;;}
 h2 a.small_text{font-size:55%;}
 .page_sub_header{margin:10px 0px;font-weight:700;font-size:18px;}
 ul.true_list li{list-style:disc inside;padding:5px 5px;}
+.italic {font-style: italic;}
 /*.wf-loading h2,.wf-loading h3{visibility:hidden;}
 */
 /*************************************************************************************************************************************/
@@ -235,7 +236,7 @@ header{position:relative;float:left;text-align:center;padding-top:5px;}
 #main_nav ul{float:left;position:relative;text-align:center;min-width:100px;}
 #main_nav ul.right_nav{float:right;}
 #main_nav ul.nav_ul li{float:left;position:relative;text-align:center;}
-#main_nav ul li a{color:#444444;display:block;font-size:14px;font-weight:100;letter-spacing:-1px;padding:5px 16px 15px;text-decoration:none;text-shadow:0 1px 0 #FFFFFF;}
+#main_nav ul li a{color:#444444;display:block;font-size:14px;font-weight:100;letter-spacing:-1px;padding:5px 13px 15px;text-decoration:none;text-shadow:0 1px 0 #FFFFFF;}
 #main_nav ul li a:hover,#top_nav ul li a:hover{color:#1642e0;text-decoration:underline;}
 #top_nav{position:absolute;top:0px;right:0px;padding-top:10px;}
 #top_nav ul,#top_nav ul li{position:relative;float:left;}
@@ -338,6 +339,7 @@ behavior:url(PIE.htc);}
 .cancel_link{position:relative;float:left;display:block;margin-left:20px;padding-top:25px;}
 .page_cta{float:right;margin-top:35px;position:relative;}
 .cta_row{float:right;margin-top:35px;padding-right:20px;position:relative;}
+.cta_row_stacked {margin-top: 48px;}
 .cta_button{color:#FFFFFF;margin-top:0px;padding: 9px 20px 5px 73px;text-decoration:none;font-size:17px;position:relative;text-align:center;border:1px solid #666;background:#0b2ebc;/* Old browsers */
 background:-moz-linear-gradient(top,#0b2ebc 0%,#031267 100%);/* FF3.6+ */
 background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#0b2ebc),color-stop(100%,#031267));/* Chrome,Safari4+ */
@@ -365,6 +367,7 @@ background:linear-gradient(top,#0b2ebc 0%,#031267 100%);/* W3C */
 	top: -15px;
 	z-index: 1;
 }
+.large_bottom_margin {margin-bottom: 40px;}
 /*************************************************************************************************************************************/
 /****************************************************************************************************** FORMS ************************/
 .admin_form_wrap{margin-top:60px;float:left;position:relative;width:100%;text-align:left;background:#ddd;}

@@ -20,7 +20,7 @@
           <td><%= (blog.title).titleize %></td>
           <td><%= (blog.author).titleize %></td>
           <td><%= link_to 'Update Post', edit_blog_path(blog), :class => "update" %></td>
-          <td><%= link_to 'Delete Post', blog, :confirm => 'Are you sure?', :method => :delete, :class => "delete" %></td>
+          <td><%= link_to 'Delete Post', blog, :confirm => 'Are you sure?', :method => :delete %></td>
         </tr>
 			<% end %>
       <% end %>

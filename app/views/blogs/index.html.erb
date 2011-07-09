@@ -7,6 +7,7 @@
   <%= render :partial => 'blogs/blog_post', :locals => {:blog => @blog} %>
 </div>
 
+<% if @blogs.length > 1 %>
 <div class="full_row inner_content">
   <h2 class="page_header">Archived News</h2>
   <% @blogs.each do |blog| %>
@@ -15,6 +16,7 @@
     <% end %>
   <% end %>
 </div>
+<% end %>
 <div class="cta_row rss_feed right">
   <%= image_tag("feed.png") %>
   <%= link_to "Subscribe to our feed", blogs_url(:rss), :class => "rss_button" %>

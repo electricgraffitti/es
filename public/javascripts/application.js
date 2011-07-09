@@ -146,6 +146,11 @@ var base = {
     $.localScroll(scrollOptions);
   },
 	
+	triggerBanner: function() {
+		var bannerButton = $("div.banner_button.r");
+		bannerButton.trigger("click");
+	},
+	
 	stopProp: function() {
 		$('.stop_prop').bind('click', function(e) {
 			e.stopPropagation();

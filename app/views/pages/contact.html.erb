@@ -4,7 +4,7 @@
 <div class="full_row inner_content">
   <div class="cta_row rss_feed right">
     <%= image_tag("feed.png") %>
-    <%= link_to "Subscribe to our feed", blogs_url(:rss), :class => "rss_button" %>
+    <%= link_to "Subscribe to Our Feed", blogs_url(:rss), :class => "rss_button" %>
   </div>
   <h2 class="page_header page_header_with_cta">Contact Core Reaction</h2>
 </div>
@@ -24,9 +24,6 @@
         <%= text_field_tag "email" %>
       </div>
       <div class="field">
-        <%= radio_button_tag "inquiry_type", "general", true, :class => "radio_buttons" %>
-        <%= label_tag "inquiry_type", "General Inquiry", :class => "radio_button_label" %><br/>
-
         <%= radio_button_tag "inquiry_type", "parent", nil, :class => "radio_buttons" %>
         <%= label_tag "inquiry_type", "Parent Inquiry", :class => "radio_button_label" %><br/>
         
@@ -41,8 +38,8 @@
         
       </div>
       <div class="field">
-        <%= check_box_tag "involved_interest", "I am interested in participating in the development of Core Reaction." %>
-        <%= label_tag "involved_interest" %>
+        <%= check_box_tag "involved_interest" %>
+        <%= label_tag "involved_interest", "I’d like to get involved."%>
       </div>
       <div id="teacher_fields">
         <div class="field">
