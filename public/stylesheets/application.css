@@ -234,6 +234,7 @@ header{position:relative;float:left;text-align:center;padding-top:5px;}
 /*************************************************************************************************************************************/
 /****************************************************************************************************** NAVIGATION *******************/
 #main_nav{background:none repeat scroll 0 0 transparent;border-bottom:1px solid #AAAAAA;bottom:0;position:absolute;width:960px;}
+.ie7 #main_nav {left:0px;}
 #main_nav ul{float:left;position:relative;text-align:center;min-width:100px;}
 #main_nav ul.right_nav{float:right;}
 #main_nav ul.nav_ul li{float:left;position:relative;text-align:center;}
@@ -322,6 +323,7 @@ footer{background:url("../images/general/footer_bg.png") repeat scroll 0 0 trans
 footer .content_edge{height:100px;}
 .footer_nav{padding-top:24px;}
 .ie .footer_nav {padding-top: 10px;}
+.ie7 .footer_nav {padding-top: 20px;}
 .footer_nav ul{height:15px;float:left;}
 .footer_nav ul li{float:left;padding:0 10px;position:relative;}
 .footer_nav ul li a{color:#D2D2D2;text-decoration:none;}
@@ -380,6 +382,9 @@ background:linear-gradient(top,#0b2ebc 0%,#031267 100%);/* W3C */
 	position: absolute;
 	top: -15px;
 	z-index: 1;
+}
+.ie7 .rss_feed img, .ie7 .go_link img {
+	top:-5px;
 }
 .large_bottom_margin {margin-bottom: 40px;}
 /*************************************************************************************************************************************/

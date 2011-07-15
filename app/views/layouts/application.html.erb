@@ -10,10 +10,11 @@
 <body>
   <div id="mast_header"></div>
   <!-- Application Layout -->
-  <div id="wrapper" class="clearfix">
+  <div id="wrapper">
     <%= render :partial => 'layouts/flash', :locals => {:flash => flash} %>
-  	<header class="clearfix">
+  	<header>
     	<%= render :partial => "layouts/header" %>
+    	<div class="clear"></div>
     </header>
     <div id="bd">
       <%= yield :banner %>
@@ -40,6 +41,7 @@
       <%= render :partial => "layouts/footer" %>
       <div class="clear"></div>
     </footer>
+    <div class="clear"></div>
   </div>
 	<%= render :partial => "layouts/scripts" %>
 </body>
