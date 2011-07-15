@@ -217,6 +217,7 @@ header,#hd,#bd,footer,#ft{position:relative;float:left;width:100%;}
 .block_list li{padding-left:10px;padding-bottom:20px;list-style:disc inside;}
 .page_links{padding:20px 0px;}
 .page_links li{padding:3px 0px;}
+.inner_content p {font-size: 13px;}
 /*************************************************************************************************************************************/
 /***************************************************************************************************** COLORS ************************/
 html,body{color:#444;}
@@ -246,6 +247,7 @@ header{position:relative;float:left;text-align:center;padding-top:5px;}
 /****************************************************************************************************** MAIN CONTENT *****************/
 #bd{text-align:left;}
 #content{position:relative;width:100%;float:left;padding-bottom:40px;-moz-box-shadow:0 0 5px #666666;-webkit-box-shadow:0 0 5px #666666;box-shadow:0 0 5px #666666;background:none repeat scroll 0 0 rgba(255,255,255,0.8);border-bottom:1px solid #888888;border-left:1px solid #333333;border-right:1px solid #333333;min-height:340px;margin:0;position:relative;width:958px;}
+.ie #content {background: #fff; border-top: 1px solid #666;}
 .content_edge{position:absolute;width:20px;height:170px;}
 .content_edge_tl{top:0px;left:-20px;background:url(../images/general/content_edge_sprite.png) 0px 0px no-repeat;}
 .content_edge_tr{top:0px;right:-20px;background:url(../images/general/content_edge_sprite.png) -20px 0px no-repeat;}
@@ -253,6 +255,8 @@ header{position:relative;float:left;text-align:center;padding-top:5px;}
 .content_edge_br{bottom:0px;right:-20px;background:url(../images/general/content_edge_sprite.png) -20px -170px no-repeat;}
 #content_disclaimer{bottom:0;color:#AAAAAA;font-size:9px;height:12px;left:0;padding:10px;position:absolute;text-align:center;width:930px;}
 #content_disclaimer p{padding:0px;margin:0px;}
+.ie #content_disclaimer {padding: 10px 0px; width: 930px; height: 15px; bottom:10px; text-align:center;}
+.ie #content_disclaimer p {line-height: 14px;}
 .content_bottom{background:url("../images/general/content_bottom.png") no-repeat scroll center 0 transparent;float:left;height:24px;margin:-1px auto;position:relative;width:960px;}
 #content img.wrapped_image{padding:5px;border:1px solid #aaa;background:#efefef;margin-bottom:10px;}
 #content img.wrapped_image.contact{background:none repeat scroll 0 0 #EFEFEF;border:1px solid #AAAAAA;margin-bottom:10px;margin-top:40px;padding:5px;}
@@ -284,7 +288,16 @@ h2.page_header_with_cta{width:600px;}
 #banner_nav ul li a{position:relative;float:left;display:block;width:16px;height:16px;margin:0px 5px;text-indent:-9999em;background:url(../images/banner/banner_nav_sprite.png) 0px -0px no-repeat;}
 #banner_nav ul li a:hover,#banner_nav ul li a.active{background:url(../images/banner/banner_nav_sprite.png) 0px -15px no-repeat;}
 #slider{position:relative;}
-.scroll{-moz-box-shadow:0 0 5px #666666;-webkit-box-shadow:0 0 5px #666666;box-shadow:0 0 5px #666666;background:none repeat scroll 0 0 rgba(255,255,255,0.8);border-bottom:1px solid #888888;border-left:1px solid #333333;border-right:1px solid #333333;clear:left;height:340px;margin:0px;overflow:hidden;position:relative;width:958px;}
+.scroll{
+	-moz-box-shadow:0 0 5px #666666;
+	-webkit-box-shadow:0 0 5px #666666;
+	box-shadow:0 0 5px #666666;
+	background:none repeat scroll 0 0 rgba(255,255,255,0.8);
+	border-bottom:1px solid #888888;
+	border-left:1px solid #333333;
+	border-right:1px solid #333333;
+	clear:left;height:340px;margin:0px;overflow:hidden;position:relative;width:958px;}
+.ie .scroll {background:#fff;}
 .scrollContainer{height:340px;}
 .panel{position:relative;width:960px;}
 /*************************************************************************************************************************************/
@@ -308,6 +321,7 @@ footer{background:url("../images/general/footer_bg.png") repeat scroll 0 0 trans
 .footer{position:relative;width:920px;height:60px;}
 footer .content_edge{height:100px;}
 .footer_nav{padding-top:24px;}
+.ie .footer_nav {padding-top: 10px;}
 .footer_nav ul{height:15px;float:left;}
 .footer_nav ul li{float:left;padding:0 10px;position:relative;}
 .footer_nav ul li a{color:#D2D2D2;text-decoration:none;}

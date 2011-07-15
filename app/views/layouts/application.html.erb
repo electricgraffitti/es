@@ -15,9 +15,9 @@
   	<header class="clearfix">
     	<%= render :partial => "layouts/header" %>
     </header>
-    <div id="bd" class="clearfix">
+    <div id="bd">
       <%= yield :banner %>
-      <div id="content" class="clearfix">
+      <div id="content">
         <div class="content_edge content_edge_tl"></div>
         <div class="content_edge content_edge_tr"></div>
         <div class="content_edge content_edge_bl"></div>
@@ -26,16 +26,19 @@
         <div id="content_disclaimer">
           <%= render :partial => "layouts/content_disclaimer" %>
         </div>
+        <div class="clear"></div>
       </div>
       <div class="content_bottom"></div>
+      <div class="clear"></div>
     </div>
     <div id="sub_boxes" class="clearfix">
       <%= yield :sub_boxes %>
     </div>
-    <footer class="clearfix">
+    <footer>
       <div class="content_edge content_edge_tl"></div>
       <div class="content_edge content_edge_tr"></div>
       <%= render :partial => "layouts/footer" %>
+      <div class="clear"></div>
     </footer>
   </div>
 	<%= render :partial => "layouts/scripts" %>
