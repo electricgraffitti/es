@@ -11,7 +11,7 @@ class Notification < ActionMailer::Base
     @interest = params[:involved_interest]
     @notify_me = params[:notify_me]
     
-    mail(:to => "Bob Hanson <bob@cube2media.com>, Larry Finn <larry@cube2media.com>", :subject => "Core Reaction Inquiry")
+    mail(:to => "Kiersten Clements <kxclements@energysolutions.com>", :subject => "Core Reaction Inquiry")
   end
   
 end
