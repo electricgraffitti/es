@@ -24,6 +24,9 @@
         <div class="content_edge content_edge_bl"></div>
         <div class="content_edge content_edge_br"></div>
         <%= yield %>
+        <div class="eslogo">
+          <%= image_tag("eslogo.png") %>
+        </div>
         <div id="content_disclaimer">
           <%= render :partial => "layouts/content_disclaimer" %>
         </div>

@@ -263,6 +263,13 @@ header{position:relative;float:left;text-align:center;padding-top:5px;}
 #content img.wrapped_image.contact{background:none repeat scroll 0 0 #EFEFEF;border:1px solid #AAAAAA;margin-bottom:10px;margin-top:40px;padding:5px;}
 #content .sub_title{font-size:12px;font-weight:100;}
 .inner_content{padding:0px 20px;width:918px;}
+.eslogo {}
+.eslogo img {
+	margin-top: 20px;
+	clear:both;
+	margin-right: 20px;
+	float:right;
+}
 /*************************************************************************************************************************************/
 /****************************************************************************************************** BANNER CONTENT ***************/
 #banner.full_row{padding:0px;}
