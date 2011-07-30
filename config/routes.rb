@@ -47,6 +47,7 @@ Es::Application.routes.draw do
   resources :teacher_sessions
   resources :admins
   resources :admin_sessions
+  resources :contact_submissions
   
   root :to => "pages#index"
 

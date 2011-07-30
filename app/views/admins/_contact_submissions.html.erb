@@ -1,0 +1,28 @@
+<div class="admin_segment">
+  <h3>Contact Submissions</h3>
+  <table id="dashboard_blogs_table" class="display">
+    <thead>  
+      <tr>
+        <th>First Name</th>
+				<th>Last Name</th>
+        <th>Email</th>
+        <th>Comments</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% cs.each do |contact| %>
+			<% unless cs.blank? %>
+        <tr>
+          <td><%= (contact.first_name).titleize %></td>
+          <td><%= (contact.last_name).titleize %></td>
+          <td><%= contact.email %></td>
+          <td><%= contact.comments %></td>
+          <td><%= button_to 'Delete Contact', contact, :method => :delete %></td>
+        </tr>
+			<% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

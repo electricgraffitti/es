@@ -1,7 +1,14 @@
 class NotificationsController < ApplicationController
   
   def general_contact
-    Notification.general_contact(params).deliver
+    
+    if params[:captcha] != ""
+      raise "spider go away"
+    else
+      ContactSubmission.set_and_send_submission(params)
+    end
+    
+    
     respond_to do |format|
       format.html {redirect_to contact_path, :notice => "Your Submission has been sent."}
     end

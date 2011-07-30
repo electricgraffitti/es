@@ -9,6 +9,7 @@
 <div class="full_row inner_content no_top">
 	<h2 class="page_header">Admin Dashboard</h2>
   <%= render :partial => 'admins/admin_blogs', :locals => {:blogs => @blogs} %>
+  <%= render :partial => 'admins/contact_submissions', :locals => {:cs => @cs} %>
 </div>
 
 <% content_for :javascripts do  %>

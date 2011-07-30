@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110702200824) do
+ActiveRecord::Schema.define(:version => 20110730095643) do
 
   create_table "admin_sessions", :force => true do |t|
     t.datetime "created_at"
@@ -85,6 +85,19 @@ ActiveRecord::Schema.define(:version => 20110702200824) do
 
   add_index "comments", ["blog_id"], :name => "index_comments_on_blog_id"
   add_index "comments", ["student_id"], :name => "index_comments_on_student_id"
+
+  create_table "contact_submissions", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.text     "comments"
+    t.string   "inquiry_type"
+    t.string   "teacher_subject"
+    t.string   "teacher_grade"
+    t.string   "interest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "gamerooms", :force => true do |t|
     t.integer  "game_id"

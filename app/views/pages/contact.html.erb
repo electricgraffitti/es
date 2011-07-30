@@ -59,6 +59,9 @@
         <%= label_tag "comments" %><br/>
         <%= text_area_tag "comments", nil, :rows => 7, :cols => 56 %>
       </div>
+      <div class="field hidden">
+        <%= text_field_tag "captcha" %>
+      </div>
       <div class="field">
         <%= submit_tag "Send Message", :class => "btn" %>
       </div>
