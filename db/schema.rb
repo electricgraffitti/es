@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110730095643) do
+ActiveRecord::Schema.define(:version => 20110811025113) do
 
   create_table "admin_sessions", :force => true do |t|
     t.datetime "created_at"
@@ -99,6 +99,13 @@ ActiveRecord::Schema.define(:version => 20110730095643) do
     t.datetime "updated_at"
   end
 
+  create_table "countries", :force => true do |t|
+    t.string   "name"
+    t.string   "code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "gamerooms", :force => true do |t|
     t.integer  "game_id"
     t.integer  "student_id"
@@ -115,6 +122,13 @@ ActiveRecord::Schema.define(:version => 20110730095643) do
   end
 
   create_table "markets", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "states", :force => true do |t|
+    t.string   "abbreviation"
+    t.string   "full_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

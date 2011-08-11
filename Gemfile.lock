@@ -30,6 +30,7 @@ GEM
     activesupport (3.0.8)
     albino (1.3.3)
       posix-spawn (>= 0.3.6)
+    annotate (2.4.0)
     arel (2.0.10)
     authlogic (3.0.3)
       activerecord (>= 3.0.7)
@@ -124,6 +125,7 @@ PLATFORMS
 
 DEPENDENCIES
   albino
+  annotate
   authlogic
   capistrano (= 2.5.19)
   chargify_api_ares
