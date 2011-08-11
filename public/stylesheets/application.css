@@ -254,7 +254,7 @@ header{position:relative;float:left;text-align:center;padding-top:5px;}
 .content_edge_tr{top:0px;right:-20px;background:url(../images/general/content_edge_sprite.png) -20px 0px no-repeat;}
 .content_edge_bl{bottom:0px;left:-20px;background:url(../images/general/content_edge_sprite.png) 0px -170px no-repeat;}
 .content_edge_br{bottom:0px;right:-20px;background:url(../images/general/content_edge_sprite.png) -20px -170px no-repeat;}
-#content_disclaimer{bottom:0;color:#AAAAAA;font-size:9px;height:12px;left:0;padding:10px;position:absolute;text-align:center;width:930px;}
+#content_disclaimer{bottom:0;color:#AAAAAA;font-size:9px;height:20px;left:0;padding:10px;position:absolute;text-align:center;width:938px;}
 #content_disclaimer p{padding:0px;margin:0px;}
 .ie #content_disclaimer {padding: 10px 0px; width: 930px; height: 15px; bottom:10px; text-align:center;}
 .ie #content_disclaimer p {line-height: 14px;}

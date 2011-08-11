@@ -4,6 +4,8 @@ class Notification < ActionMailer::Base
   def general_contact(params)
     @username = params[:first_name] + " " + params[:last_name]
     @email = params[:email]
+    @state = params[:state]
+    @country = params[:country]
     @comments = params[:comments]
     @inquiry_type = params[:inquiry_type]
     @teacher_subject = params[:teacher_subject]

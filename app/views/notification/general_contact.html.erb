@@ -39,6 +39,8 @@
                   <h2 style="margin-top: 0px; margin-bottom: 10px; margin-right: 30px; margin-left: 30px; line-height: 1.3em; font-size: 16px; color: #1642E0;" >Contact Name: <%= (@username).titleize %></h2>
                   <ul style="margin-top: 0px; margin-bottom: 10px; margin-right: 30px; margin-left: 30px; line-height: 1.3em; font-size: 14px; color: #777777;">
                     <li>Contact Email: <%= @email %></li>
+                    <li>Contact State: <%= @state %></li>
+                    <li>Contact Country: <%= @country %></li>
                     <li>Inquiry Type: <%= @inquiry_type %></li>
                     <% if @interest == ""%>
                     <li>Involved Interest: "No, Not at this time."</li>

@@ -24,6 +24,18 @@
         <%= text_field_tag "email" %>
       </div>
       <div class="field">
+        <%= label_tag "state", "State" %><br/>
+        <%= select_tag :state, options_from_collection_for_select(States.all, "full_name", "full_name"), {:default => 'Show All'} %>
+      </div>
+      <div class="field">
+        <%= label_tag "country", "Country" %><br/>
+        <%= select_tag :country, options_from_collection_for_select(Country.all, "name", "name"), {:default => 'Select Country'} %>
+      </div>
+      <div class="field">
+        <%= label_tag "email", "Email Address" %><br/>
+        <%= text_field_tag "email" %>
+      </div>
+      <div class="field">
         <%= radio_button_tag "inquiry_type", "parent", nil, :class => "radio_buttons" %>
         <%= label_tag "inquiry_type", "Parent Inquiry", :class => "radio_button_label" %><br/>
         
