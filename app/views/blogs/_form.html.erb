@@ -18,6 +18,10 @@
       <%= f.label :body, "News Post" %><br />
       <%= f.text_area :body, :id => "markdown", :rows => 20, :cols => 130 %>
     </div>
+		<div class="field">
+			<%= f.label :meta_keywords, "Keywords (separate with comma)" %>
+			<%= f.text_field :meta_keywords %>
+		</div>
     <div class="clear"></div>
     <%= f.fields_for :assets do |asset_form| %>
       <div class="field">

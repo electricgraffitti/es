@@ -2,11 +2,14 @@
 #
 # Table name: blogs
 #
-#  id         :integer(4)      not null, primary key
-#  title      :string(255)
-#  body       :text
-#  created_at :datetime
-#  updated_at :datetime
+#  id            :integer(4)      not null, primary key
+#  title         :string(255)
+#  body          :text
+#  created_at    :datetime
+#  updated_at    :datetime
+#  author        :string(255)
+#  author_title  :string(255)
+#  meta_keywords :text
 #
 
 require 'spec_helper'
