@@ -19,8 +19,12 @@
       <%= f.text_area :body, :id => "markdown", :rows => 20, :cols => 130 %>
     </div>
 		<div class="field">
-			<%= f.label :meta_keywords, "Keywords (separate with comma)" %>
-			<%= f.text_field :meta_keywords %>
+			<%= f.label :meta_keywords, "Meta Keywords (separate with comma)" %><br />
+			<%= f.text_area :meta_keywords, :rows => 10, :cols => 30 %>
+		</div>
+		<div class="field">
+			<%= f.label :meta_description, "Meta Description (150 char's max)" %><br />
+			<%= f.text_area :meta_description, :rows => 10, :cols => 60 %>
 		</div>
     <div class="clear"></div>
     <%= f.fields_for :assets do |asset_form| %>

@@ -1,4 +1,4 @@
-<meta content=<%= truncate(blog.body, :length => 150) %> name="description">
+<meta content=<%= truncate(blog.meta_description, :length => 150) %> name="description">
 <meta content=<%= blog.meta_keywords %> name="keywords">
 <div class="news_listing inner_content">
   <%= image_tag(blog.assets.last.attachment.url(:thumb), :alt => blog.title) %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110818205316) do
+ActiveRecord::Schema.define(:version => 20110819023102) do
 
   create_table "admin_sessions", :force => true do |t|
     t.datetime "created_at"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20110818205316) do
     t.string   "author"
     t.string   "author_title"
     t.text     "meta_keywords"
+    t.text     "meta_description"
   end
 
   create_table "classrooms", :force => true do |t|
