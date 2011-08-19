@@ -522,8 +522,9 @@ padding: 5px 5px;
 font-style: italic;
 }
 .social {
-	position: relative;
-	float: left;
+ bottom: -30px;
+ float: left;
+ position: absolute;
 }
 /*.wf-loading h2,.wf-loading h3 {
 visibility: hidden;
