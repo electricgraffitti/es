@@ -23,8 +23,8 @@
 			<%= f.text_area :meta_keywords, :rows => 10, :cols => 30 %>
 		</div>
 		<div class="field">
-			<%= f.label :meta_description, "Meta Description (150 char's max)" %><br />
-			<%= f.text_area :meta_description, :rows => 10, :cols => 60 %>
+			<%= f.label :meta_description, "Meta Description" %> Characters left: <span id="char-count">150</span><br />
+			<%= f.text_area :meta_description, :maxlength => 150, :rows => 5, :cols => 30 %>
 		</div>
     <div class="clear"></div>
     <%= f.fields_for :assets do |asset_form| %>
