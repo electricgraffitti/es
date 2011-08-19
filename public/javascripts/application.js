@@ -1,6 +1,8 @@
 /*jslint white: false, onevar: false, browser: true, devel: true, undef: true, nomen: true, laxbreak: true, eqeqeq: true, plusplus: true, bitwise: true, regexp: true, strict: false, newcap: true, immed: true, laxbreak: true */
 /*global jQuery, $, Raphael */
 
+
+/*character counter for blog meta_description*/
 $('#blog_meta_description').live('keyup keydown', function(e) {
 	var maxLen = 150;
 	var left = maxLen - $(this).val().length;
