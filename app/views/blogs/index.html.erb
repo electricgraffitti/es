@@ -22,3 +22,7 @@
   <%= link_to "Subscribe to our feed", blogs_url(:rss), :class => "rss_button" %>
 </div>
 
+<% content_for :javascripts do %>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e4d7458180c35f7"></script>
+<% end %>
+

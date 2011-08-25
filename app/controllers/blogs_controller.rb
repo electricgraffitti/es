@@ -7,6 +7,11 @@ class BlogsController < ApplicationController
   def index
     @blogs = Blog.all
     @blog = Blog.last
+    
+    # raise blogs_url.to_yaml
+    # blog.title
+    # blog.meta_description
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @blogs }
