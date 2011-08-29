@@ -1,7 +1,9 @@
 <meta content=<%= blog.meta_description %> name="description">
 <meta content=<%= blog.meta_keywords %> name="keywords">
 <div class="news_listing inner_content">
-  <%= image_tag(blog.assets.last.attachment.url(:thumb), :alt => blog.title) %>
+  <% unless blog.assets.empty? %>
+    <%= image_tag(blog.assets.last.attachment.url(:thumb), :alt => blog.title) %>
+  <% end %>
   <div class="retweet_links">
     <%#= link_to "#{blog.title}", blog_path(blog), :class => "retweet vert" %>
   </div>
