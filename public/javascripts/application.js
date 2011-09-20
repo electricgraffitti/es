@@ -82,9 +82,6 @@ var forms = {
 
 var share = {
 	
-
-	}
-	
 };
 
 var video = {
