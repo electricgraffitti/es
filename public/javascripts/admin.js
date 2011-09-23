@@ -9,7 +9,13 @@ var admin = {
 			"sPaginationType": "full_numbers"
 		});
 		
+		$('#dashboard_contact_submissions_table').dataTable({
+			"bJQueryUI": true,
+			"sPaginationType": "full_numbers"
+		});
+		
 	}
+	
 };
 
 //**********Initialize Document**********//

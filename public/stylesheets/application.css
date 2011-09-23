@@ -1005,6 +1005,22 @@ height: 340px;
 position: relative;
 width: 960px;
 }
+h2.sponsor {
+	float: left;
+	font-size: 20px;
+	width: 918px;
+	text-align: right;
+}
+ul.logos {
+	float:left;
+	width: 918px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 15px;
+}
+ul.logos li.energy_logo {
+	float:right;
+	margin-bottom: 5px;
+}
 /*************************************************************************************************************************************/
 /******************************************************************************************************** LOGINS *********************/
 .teacher_form {
