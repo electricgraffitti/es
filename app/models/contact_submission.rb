@@ -17,6 +17,8 @@
 
 class ContactSubmission < ActiveRecord::Base
   
+  attr_accessor :country, :state
+  
   def self.set_and_send_submission(params)
     self.create(
       :first_name => params[:first_name],

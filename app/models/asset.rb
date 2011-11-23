@@ -12,6 +12,7 @@
 #  attachment_content_type :string(255)
 #  attachment_file_size    :integer(4)
 #  attachment_updated_at   :datetime
+#  sponsor_id              :integer(4)
 #
 
 class Asset < ActiveRecord::Base
