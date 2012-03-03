@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.8'
+gem 'rails', '3.0.10'
 gem 'mysql2', '0.2.10'
 gem 'capistrano', '2.5.19'
 gem 'annotate'
