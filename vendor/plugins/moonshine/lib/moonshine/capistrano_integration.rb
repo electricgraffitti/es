@@ -180,17 +180,10 @@ module Moonshine
           desc 'Run script/console on the first application server'
           task :console, :roles => :app, :except => {:no_symlink => true} do
             input = ''
-            if capture("test -f #{current_path}/script/console; echo $?").strip == "0"
-              command = "cd #{current_path} && ./script/console #{fetch(:rails_env)}"
-              prompt = /^(>|\?)>/
-            else
-              command = "cd #{current_path} && ./script/rails console #{fetch(:rails_env)}"
-              prompt = /:\d{3}:\d+(\*|>)/
-            end
-            run command do |channel, stream, data|
+            run "cd #{current_path} && ./script/console #{fetch(:rails_env)}" do |channel, stream, data|
               next if data.chomp == input.chomp || data.chomp == ''
               print data
-              channel.send_data(input = $stdin.gets) if data =~ prompt
+              channel.send_data(input = $stdin.gets) if data =~ /^(>|\?)>/
             end
           end
 
@@ -391,11 +384,11 @@ module Moonshine
             remove_ruby_from_apt
             run [
               'cd /tmp',
-              'sudo rm -rf ruby-enterprise-1.8.7-2011.02* || true',
+              'sudo rm -rf ruby-enterprise-1.8.7-2010.02* || true',
               'sudo mkdir -p /usr/lib/ruby/gems/1.8/gems || true',
-              'wget -q http://rubyenterpriseedition.googlecode.com/files/ruby-enterprise-1.8.7-2011.02.tar.gz',
-              'tar xzf ruby-enterprise-1.8.7-2011.02.tar.gz',
-              'sudo /tmp/ruby-enterprise-1.8.7-2011.02/installer --dont-install-useful-gems --no-dev-docs -a /usr'
+              'wget -q http://rubyforge.org/frs/download.php/71096/ruby-enterprise-1.8.7-2010.02.tar.gz',
+              'tar xzf ruby-enterprise-1.8.7-2010.02.tar.gz',
+              'sudo /tmp/ruby-enterprise-1.8.7-2010.02/installer --dont-install-useful-gems --no-dev-docs -a /usr'
             ].join(' && ')
           end
 
@@ -437,8 +430,7 @@ module Moonshine
             sudo 'gem install i18n --no-rdoc --no-ri' # workaround for missing activesupport-3.0.2 dep on i18n
             sudo 'gem install shadow_puppet --no-rdoc --no-ri'
             if rails_root.join('Gemfile').exist?
-              bundler_version = fetch(:bundler_version, '1.0.9')
-              sudo "gem install bundler --no-rdoc --no-ri --version='#{bundler_version}'"
+              sudo 'gem install bundler --no-rdoc --no-ri'
             end
           end
         end

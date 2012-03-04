@@ -10,8 +10,8 @@ module Moonshine::Manifest::Rails::Passenger
       package "passenger",
         :ensure => (configuration[:passenger][:version] || :latest),
         :provider => :gem,
-        :require => [ package('libcurl4-openssl-dev') ]
-      package 'libcurl4-openssl-dev', :ensure => :installed
+        :require => [ package('libcurl4-gnutls-dev') ]
+      package 'libcurl4-gnutls-dev', :ensure => :installed
     end
   end
 
@@ -46,7 +46,7 @@ module Moonshine::Manifest::Rails::Passenger
         package("apache2-threaded-dev"),
         exec('symlink_passenger')
       ],
-      :timeout => 108000
+      :timeout => -1
 
     load_template = "LoadModule passenger_module #{configuration[:passenger][:path]}/ext/apache2/mod_passenger.so"
 
