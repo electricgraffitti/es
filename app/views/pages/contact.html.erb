@@ -46,7 +46,7 @@
         
       </div>
       <div class="field">
-        <%= check_box_tag "involved_interest" %>
+        <%= check_box_tag "involved_interest", 'interested', false %>
         <%= label_tag "involved_interest", "I’d like to get involved."%>
       </div>
       <div id="teacher_fields">
@@ -60,7 +60,7 @@
         </div>
       </div>
       <div class="field">
-        <%= check_box_tag "notify_me" %>
+        <%= check_box_tag "notify_me", 'notify me', false %>
         <%= label_tag "notify_me", "Notify me when game releases" %>
       </div>
       <div class="field">
