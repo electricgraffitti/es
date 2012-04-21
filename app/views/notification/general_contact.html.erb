@@ -42,13 +42,13 @@
                     <li>Contact State: <%= @state %></li>
                     <li>Contact Country: <%= @country %></li>
                     <li>Inquiry Type: <%= @inquiry_type %></li>
-                    <% if @interest == ""%>
-                    <li>Involved Interest: "No, Not at this time."</li>
+                    <% if @interest == "interested" %>
+                      <li>Involved Interest: "Yes, Please notify me."</li>
                     <% else %>
-                    <li>Involved Interest: "Yes, Please notify me."</li>
+                      <li>Involved Interest: "No, Not at this time."</li>
                     <% end %>
                     
-                    <% if @notify_me == "1"%>
+                    <% if @notify_me == "notify me"%>
                     <li>Notify Me: "Yes, Please notify me."</li>
                     <% else %>
                     <li>Notify Me: "No, Not at this time."</li>

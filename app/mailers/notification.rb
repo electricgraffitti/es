@@ -14,6 +14,7 @@ class Notification < ActionMailer::Base
     @notify_me = params[:notify_me]
     
     mail(:to => "Kiersten Clements <kxclements@energysolutions.com>", :subject => "Core Reaction Inquiry")
+    # mail(:to => "Bob Hanson <bob@cube2media.com>", :subject => "Core Reaction Inquiry")
   end
   
 end

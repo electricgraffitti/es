@@ -1,7 +1,8 @@
 class NotificationsController < ApplicationController
   
   def general_contact
-        #raise params.to_yaml
+    
+    # raise params.to_yaml
     
     if params[:captcha] != ""
       raise "spider go away"
